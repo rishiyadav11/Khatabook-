@@ -74,7 +74,8 @@ const registerUser = async (req, res) => {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production', // Use 'true' in production
             maxAge: 30 * 24 * 60 * 60 * 1000,
-            sameSite: 'lax',
+            sameSite: 'None',
+                path: '/',
         });
 
         return res.status(201).json({ 
