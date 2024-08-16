@@ -22,6 +22,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use("/auth",AuthRouter)
 app.use("/hissab", hissabRouter)
 
+app.get("/",(req,res)=>{
+    res.send("hello this is your first page")
+})
 
 app.listen(port,() => {
     console.log(`Listening on ${port}`)
