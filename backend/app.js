@@ -12,12 +12,13 @@ DatabaseConnect()
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(cors({
-    origin: 'https://khatabook-teal.vercel.app/', // Replace with your frontend URL
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allow necessary HTTP methods
+const corsOptions = {
+  origin: 'https://khatabook-teal.vercel.app', // Correct origin without trailing slash
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+};
+app.use(cors(corsOptions));
 
-}))
 app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
