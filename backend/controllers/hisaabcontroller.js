@@ -1,5 +1,5 @@
 const hissabModel = require("../models/hissab-model");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const UserModel = require("../models/user-model");
 
 const createhissab = async (req, res) => {
