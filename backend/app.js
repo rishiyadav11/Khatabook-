@@ -15,6 +15,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
     origin: 'http://localhost:5173', // Replace with your frontend URL
     credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allow necessary HTTP methods
+
 }))
 app.use(cookieParser())
 app.use(express.json())
