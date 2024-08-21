@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const corsOptions = {
-  origin: 'https://khatabook-teal.vercel.app', // Correct origin without trailing slash
+  origin: process.env.FRONTEND_URL, // Correct origin without trailing slash
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 };
